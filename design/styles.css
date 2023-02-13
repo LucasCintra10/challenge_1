@@ -76,6 +76,9 @@ body {
     padding: 14px;
     background-position: 5rem;
 }
+.produto__botao:hover {
+    background-color: #1A4031;
+}
 .attribution {
     margin: 5rem;
 }
