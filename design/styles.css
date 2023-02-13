@@ -1,0 +1,104 @@
+:root {
+    --cor-verde: #3D8168;
+    --cor-rose: #F3EAE3;
+    --cor-cinza: #9598A1;
+    --fonte-titulo: 'Fraunces', serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+}
+body {
+    background-color: var(--cor-rose);
+    font-size: 14px;
+    
+}
+.produto__card {
+    background-color: white;
+    width: 90vw;
+    display: grid;
+    border-radius: 20px;
+    margin: auto;
+}
+.produto__img-mobile {
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.produto__img-desktop {
+    display: none;
+}
+.produto__descricao {
+    padding: 24px;
+    font-family: var(--fonte-texto);
+    font-weight: 500;
+    color: var(--cor-cinza);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+}
+.produto__descricao h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    grid-column: span 2;
+    margin: 0px;
+}
+.produto__descricao h1 {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    color: black;
+    font-size: 30px;
+    grid-column: span 2;
+    margin: 0px;
+}
+.produto__texto {
+    grid-column: span 2;
+}
+.produto__preco-destaque {
+    font-family: var(--fonte-titulo);
+    font-size: 30px;
+    color: var(--cor-verde);
+    margin: 0px;
+}
+.produto__botao {
+    grid-column: span 2;
+    height: 36px;
+    border-radius: 8px;
+    background-color: var(--cor-verde);
+    color: white;
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    background-image: url("../images/icon-cart.svg");
+    background-repeat: no-repeat;
+    margin-top: 1em;
+    text-align: center;
+    height: auto;
+    padding: 14px;
+    background-position: 5rem;
+}
+.attribution {
+    margin: 5rem;
+}
+
+@media screen and (min-width:1440px) {
+    .produto__card {
+        width: 40vw;
+        grid-template-columns: 1fr 1fr;
+        margin: 10% auto;
+    }
+    .produto__img-mobile {
+        display: none;
+    }
+    .produto__img-desktop {
+        display: block;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .produto__botao {
+        background-position: 3.5rem;
+    }
+    .attribution {
+        text-align: center;
+    }
+}
